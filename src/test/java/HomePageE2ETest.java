@@ -17,16 +17,11 @@ public class HomePageE2ETest {
     }
 
     @Test
-    void test_home(){
+    void test_home() throws InterruptedException {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://www.google.com/");
-
-        try {
             Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @AfterClass
